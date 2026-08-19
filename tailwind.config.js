@@ -1,0 +1,98 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      colors: {
+        ink: {
+          50: '#f6f7f9',
+          100: '#eceef2',
+          200: '#d5d9e2',
+          300: '#b0b8c7',
+          400: '#8492a8',
+          500: '#65738c',
+          600: '#515e74',
+          700: '#424d5f',
+          800: '#394150',
+          900: '#1f2530',
+        },
+        brand: {
+          50: '#eef6ff',
+          100: '#d9ebff',
+          200: '#bcdaff',
+          300: '#8ec1ff',
+          400: '#599dff',
+          500: '#3479fb',
+          600: '#1e5bf0',
+          700: '#1747d6',
+          800: '#193cae',
+          900: '#1a3889',
+        },
+        accent: {
+          50: '#f0fdf4',
+          100: '#dcfce7',
+          200: '#bbf7d0',
+          300: '#86efac',
+          400: '#4ade80',
+          500: '#22c55e',
+          600: '#16a34a',
+          700: '#15803d',
+          800: '#166534',
+          900: '#14532d',
+        },
+        warn: {
+          50: '#fffbeb',
+          100: '#fef3c7',
+          200: '#fde68a',
+          300: '#fcd34d',
+          400: '#fbbf24',
+          500: '#f59e0b',
+          600: '#d97706',
+          700: '#b45309',
+          800: '#92400e',
+          900: '#78350f',
+        },
+        err: {
+          50: '#fef2f2',
+          100: '#fee2e2',
+          200: '#fecaca',
+          300: '#fca5a5',
+          400: '#f87171',
+          500: '#ef4444',
+          600: '#dc2626',
+          700: '#b91c1c',
+          800: '#991b1b',
+          900: '#7f1d1d',
+        },
+      },
+      boxShadow: {
+        card: '0 1px 3px rgba(16,24,40,0.06), 0 1px 2px rgba(16,24,40,0.04)',
+        'card-hover': '0 8px 24px rgba(16,24,40,0.10), 0 2px 6px rgba(16,24,40,0.06)',
+        pop: '0 12px 40px rgba(16,24,40,0.16)',
+      },
+      keyframes: {
+        'fade-in': {
+          from: { opacity: '0' },
+          to: { opacity: '1' },
+        },
+        'slide-up': {
+          from: { opacity: '0', transform: 'translateY(8px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
+        'toast-in': {
+          from: { opacity: '0', transform: 'translateY(16px) scale(0.96)' },
+          to: { opacity: '1', transform: 'translateY(0) scale(1)' },
+        },
+      },
+      animation: {
+        'fade-in': 'fade-in 0.2s ease-out',
+        'slide-up': 'slide-up 0.25s ease-out',
+        'toast-in': 'toast-in 0.3s cubic-bezier(0.22,1,0.36,1)',
+      },
+    },
+  },
+  plugins: [],
+};
